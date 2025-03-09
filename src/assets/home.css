@@ -1,0 +1,224 @@
+.parent {
+    display: flex; /* This makes both divs come in one row */
+    justify-content: center;
+    align-items: center;
+    height: -40px; /* Adjust based on your need */
+    gap: 10px; /* Space between them */
+    /* flex-direction: column; */
+    overflow: hidden; 
+}
+
+.container, .cont2,.cont3,.cont4,.cont5{
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+.cont2 {   
+     width: auto; /* Adjust width based on content */
+        min-width: 100px; /* Ensure it doesn't get too small */
+    height:-40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.cont3 {   
+    width: auto; /* Adjust width based on content */
+       min-width: 100px; /* Ensure it doesn't get too small */
+   height:-40px;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden; 
+}
+
+.cont4 {   
+    width: auto; /* Adjust width based on content */
+       min-width: 100px; /* Ensure it doesn't get too small */
+   height:-40px;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden; 
+}
+
+.moveDown {
+    width: 300px;
+    height: 480px;
+    background-color: hwb(225 95% 3%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Hide top part */
+    animation: slideUpDown 4s ease-in-out infinite  alternate; 
+    flex-direction: row;
+}
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-600px); /* Start slightly hidden */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        transform: translateY(20); /* Fully visible */
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        transform: translateY(-550px); /* Slide back down */
+        opacity: 0; /* Fade out */
+    }
+}
+/*  */
+.head {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 600px;
+    height: 70%;
+    overflow: hidden; 
+}
+
+/* Apply typing animation only to h2 */
+.head h2 {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    border-right: 3px solid aliceblue; /* Cursor effect */
+    width: 0; /* Start hidden */
+    animation: typing 3s steps(25, end) forwards, blinkCursor 0.8s infinite;
+}
+
+/* Paragraphs should wrap normally without animation */
+.head p {
+    white-space: normal; /* Allow text wrapping */
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blinking effect */
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+    100%{
+        border-color: aliceblue;
+    }
+}
+
+
+body
+{
+/* background-image: url("https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9530.jpg?t=st=1740171410~exp=1740175010~hmac=6b33b053b52de5fe5bfaaf24cc20448b59b41a20b156248b22e3e46fd36b9e0b&w=1480"); */
+background-color: hwb(0 0% 100%);
+background-size: cover;
+opacity: 0.9;
+overflow-x: hidden;
+/* overflow: hidden; */
+}
+
+.divider {
+    width: 60vw; /* Full screen width */
+    height: 2px; /* Line thickness */
+    background-color: aliceblue; /* Line color */
+    border: none; /* Remove default border */
+    position: relative; /* Keep it in flow */
+    left: 0; /* Ensure it starts from the left edge */
+    /* Add space above and below */
+
+}
+
+
+section {
+    height: 100vh; /* Each section takes full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding-top: 10px;
+ overflow: hidden;   
+}
+#skills{
+
+    position: absolute;
+transform: translateX(-50%);
+
+color: aliceblue;
+left: 30%;
+
+}
+
+.divider {
+    margin-top: 100px;
+    width: 100vw;
+    height: 2px;
+    background-color: aliceblue;
+    border: none;
+    margin: 0;
+    position: relative;
+}
+
+html {
+    overflow-x: hidden;  
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+.head {
+    display: flex;
+    justify-content: space-between; /* Moves text left, circle right */
+    align-items: center; /* Aligns items vertically */
+    width: 90%; /* Adjust width for better alignment */
+    max-width: 1200px; /* Prevents excessive stretching */
+    padding-left: 50px; /* Space from left side */
+    color: white; /* Adjust text color */
+    gap: 50px; /* More space between text and circle */
+    margin: 0 auto; /* Center the section */
+    left: 40%;
+    transform: translate(-50%);
+}
+
+.text-content {
+    width: 60%; /* Adjust width for text */
+    flex-grow: 1; /* Pushes circle to the right */
+}
+
+.circle {
+    width: 400px;
+    aspect-ratio: 1/1;  /* Ensures perfect circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 15px blue; /* Optional glowing effect */
+    margin-left: auto; /* Ensures it stays at the right */
+}
